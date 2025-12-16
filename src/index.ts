@@ -1,14 +1,6 @@
-import { config } from 'dotenv'
-import { fileURLToPath } from 'url'
-import { dirname, join } from 'path'
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js'
 import { z } from 'zod'
 import { HfInference } from '@huggingface/inference'
-
-// ES 모듈에서 .env 파일 로드
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = dirname(__filename)
-config({ path: join(__dirname, '..', '.env') })
 
 // 설정 스키마 (선택적: 사용자 설정이 필요한 경우)
 export const configSchema = z.object({
